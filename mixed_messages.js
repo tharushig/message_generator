@@ -1,10 +1,11 @@
+//generating random number
 let randomNumberGenerator = () => {
     let number = Math.floor(Math.random() * 3);
     return number;
 }
 
 let randomMessage = [];
-
+//object that contains message components
 const message = {
     greeting: ['Hello there!', 'Greetings!', 'Hi!!'],
     colour: ['red', 'blue', 'green'],
@@ -12,6 +13,7 @@ const message = {
     exit: ['Goodbye!', 'Farewell!', 'See Ya!!']
 }
 
+//randomly selects each component of the message and prints multiple messages to the console
 let createMessage = () => {
     for (property in message) {
         switch(property) {
@@ -34,4 +36,5 @@ let createMessage = () => {
     console.log(randomMessage.join('\n'))
 }
 
+//calling function
 createMessage();
